@@ -38,13 +38,17 @@ function getRecipesFromStorage() {
  */
 function addRecipesToDocument(recipes) {
 	// A10. TODO - Get a reference to the <main> element
-
+	let main = document.querySelector('main');
 
 	// A11. TODO - Loop through each of the recipes in the passed in array,
 	//            create a <recipe-card> element for each one, and populate
 	//            each <recipe-card> with that recipe data using element.data = ...
 	//            Append each element to <main>
-	
+	for(let recipe of recipes){
+		let recipeCard = document.createElement('recipe-card');
+		recipeCard.data = recipe;
+		main.appendChild(recipeCard);
+	}
 
 }
 
